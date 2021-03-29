@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "email": "tsirekidze.mariam@yahoo.com",
+      "password": "mari",
+      "id": 1
+    },
+    {
+      "email": "tsirekidze.mariam@yahoo.com",
+      "password": "mari",
+      "id": 2
+    },
+    {
+      "email": "tsirekidze.mariam@yahoo.com",
+      "password": "mari",
+      "id": 3
+    }
+  ]
+}
