@@ -1,0 +1,27 @@
+<div class="header">
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../../../../../assets/login/chat-logo.png" alt="logo" />
+      <p>Live<span>Chat</span></p>
+    </div>
+
+    <ul class="navigation">
+      <div class="line"></div>
+      <li><a href = "#{{hrefHome}}">Home</a></li>
+      <li><a href = "#{{hrefSignIn}}">Sign In</a></li>
+      <li><a href = "#{{hrefRegister}}">Register</a></li>
+      <li><a href = "#{{hrefContact}}">Contact</a></li>
+    </ul>
+    #{{hrefSignIn}}
+    #{{hrefContact}}
+    #{{hrefHome}}
+    <div class="toggle">
+      <app-shared-toggle
+        ngModel
+        [toggleId]="'dark-toggle'"
+        #toggle="ngModel"
+      ></app-shared-toggle>
+      <label class="dark-mode" for="dark-toggle">Dark mode</label>
+    </div>
+  </nav>
+</div>

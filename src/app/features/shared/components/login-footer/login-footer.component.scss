@@ -1,0 +1,37 @@
+@import 'index.scss';
+:host{
+    display: block;
+}
+.login-footer{
+    width:100%;
+    background-color:$footer;
+}
+.login-info{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-left: 10%;
+    width:fit-content;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    .division{
+        height: 50px;
+        width: fit-content;
+        padding: 8px;
+        padding-top: 16px;
+        border: 1px solid $primary;
+        display: flex;
+        i{
+            display: inline-block;
+            margin-right: 5px;
+            color: $primary;
+            margin-top: 2px;
+        }
+        p{
+            display: inline-block;
+        }
+        span{
+            color:$primary-dark;
+        }
+    }
+}

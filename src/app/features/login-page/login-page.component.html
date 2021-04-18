@@ -1,0 +1,47 @@
+<div @fadeInOut>
+  <shared-component-navbar 
+    hrefHome="Home"
+    hrefSignIn="SignIn"
+    hrefRegister="Register"
+    hrefContact="Contact"
+  ></shared-component-navbar>
+  <div class="login-body" id = "Home">
+    <div class="content">
+      <div class="title-header">
+        <hr />
+        <h2 class="title">Welcome!</h2>
+        <h2 class="after-title">to the LiveChat</h2>
+        <hr />
+      </div>
+
+      <shared-component-sidebar></shared-component-sidebar>
+      <shared-component-log-in id = "SignIn"></shared-component-log-in>
+    </div>
+  </div>
+  <div class="header-2">
+    <div class="title-header">
+      <hr />
+      <h2 class="title">How To Use</h2>
+      <h2 class="after-title">easy to use</h2>
+      <hr />
+    </div>
+  </div>
+
+  <app-shared-cardview></app-shared-cardview>
+  <div class="header-3" id="Register">
+    <div class="title-header">
+      <hr />
+      <h2 class="title">Register!</h2>
+      <h2 class="after-title">Now</h2>
+      <hr />
+    </div>
+  </div>
+  <component-shared-register ></component-shared-register>
+  <div class="contact" id="Contact">
+    <div class="max-wdth">
+      <p>Contact Us ...</p>
+      <i class="fas fa-arrow-down"></i>
+    </div>
+  </div>
+  <shared-component-login-footer></shared-component-login-footer>
+</div>

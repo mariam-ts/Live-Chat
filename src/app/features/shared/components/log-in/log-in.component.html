@@ -6,15 +6,19 @@
 <div class="card">
     <div class="card-body">
         <form class="form-signin" [formGroup] = "signInGroup" (ngSubmit)="onSubmit()" >
+            <div class = "sing-in-text">
+                <div class = "details"> <hr>Sign In <hr></div> 
+            </div>
             
-            <div class = "icon-container"><i class="fas fa-comments"></i></div>
-            <div class = "sign-in-text-container"><p class = "sign-in-text">Sign In</p></div>
             <label for="inputEmail" class="sr-only">Email address</label>
             <input type="email" name="email" id="inputEmail" class="form-control" formControlName = "email" placeholder="Email address" required ngModel>
             
             <label for="inputPassword" class="sr-only">Password</label>
             <input type="password" name="password" id="inputPassword" class="form-control" formControlName = "password" placeholder="Password" required ngModel>
             
+            <div class ="sign-up">
+                <p>Need new account? <a>Sign up free</a></p>
+            </div>
             <button class="btn btn-lg btn-primary btn-block warning" type="submit" >Sign in</button>
             <div class="alert alert-danger" role="alert" *ngIf = "loginMessage">
                 Email or Password is Incorrect

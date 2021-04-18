@@ -1,0 +1,108 @@
+@import 'index.scss';
+img {
+  max-width: 100%;
+}
+.inbox-people {
+  float: left;
+  overflow: hidden;
+  width: 40%;
+  border-right: 1px solid #c4c4c4;
+  border-radius: 3%;
+  height: 100%;
+}
+.own-img{
+    float: left;
+    width:7%;
+    align-self: flex-start;
+}
+.inbox-msg {
+  border: 1px solid #5f5353;
+  clear: both;
+  overflow: hidden;
+}
+.top-spac {
+  margin: 20px 0 0;
+}
+
+.recent-heading {
+  float: left;
+  align-self: flex-start;
+ // width: 40%;
+  margin-left: 7px;
+  margin-top: 8px;
+}
+.srch-bar {
+  display: inline-block;
+  text-align: right;
+  width: 60%;
+  margin-left: auto;
+  align-self: flex-end;
+  .btn:hover{
+      background-color: $blue-dark;
+  }
+}
+.headind-srch {
+  padding: 10px 10px 10px 20px;
+  overflow: hidden;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  border-bottom: 1px solid $dark-secondary-3;
+}
+
+.recent-heading h4 {
+  color: #05728f;
+  @include text-style(21px);
+  font-size: 21px;
+  margin: auto;
+}
+
+
+.chat-ib h5 {
+  font-size: 15px;
+  color: $secondary-dark-1;
+  margin: 0 0 8px 0;
+}
+.chat-ib h5 span {
+  font-size: 13px;
+  float: right;
+}
+.chat-ib p {
+  font-size: 14px;
+  color: $secondary-dark-2;
+  margin: auto;
+}
+.chat-img {
+  float: left;
+  width: 11%;
+ img{
+   border-radius: 50%;
+   width: 90px;
+   height:90px ;
+ }
+}
+.chat-ib {
+  float: left;
+  padding: 0 0 0 15px;
+  width: 88%;
+}
+
+
+.chat-people {
+  overflow: hidden;
+  clear: both;
+}
+.chat-list {
+  border-bottom: 1px solid $dark-secondary-3;
+  margin: 0;
+  padding: 18px 16px 10px;
+  box-sizing: border-box;
+}
+.chat-list:hover{
+    background-color: $primary-light;
+    
+}
+.inbox-chat {
+  height: 90%;
+  overflow-y: scroll;
+}

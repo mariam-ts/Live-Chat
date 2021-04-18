@@ -1,0 +1,68 @@
+@import 'index.scss';
+:host{
+    display: block;
+}
+.services{
+    @include text-style(14px);
+    background: $primary-lighter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    height: 500px;
+}
+
+.services .title::before,
+.teams .title::before{
+    background: #fff;
+}
+.services .title::after,
+.teams .title::after{
+    background: $primary-dark;
+    content: "what i provide";
+}
+.services .serv-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.services .serv-content .card{
+    width: calc(33% - 20px);
+    background: $primary-light;
+    text-align: center;
+    border-radius: 6px;
+    padding: 35px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+.services .serv-content .card:hover{
+    background: $primary-lighter;
+}
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.services .serv-content .box p{
+    line-height: 1.5rem;
+}
+.services .serv-content .card i{
+    font-size: 50px;
+    color: $primary;
+    transition: color 0.3s ease;
+}
+.services .serv-content .card:hover i{
+    color: #fff;
+}
+.services .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.6rem;
+    margin: 10px 0 7px 0;
+}
+.max-width{
+    width: 1200px;
+}

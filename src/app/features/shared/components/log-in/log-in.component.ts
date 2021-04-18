@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
-import { IUser } from '../shared/interfaces/user.interface';
-import { AuthService } from '../shared/services/auth.service';
-import { UserService } from '../shared/services/user.service';
+import { IUser } from '../../interfaces/user.interface';
+import { AuthService } from '../../services/auth.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
-  selector: 'app-log-in',
+  selector: 'shared-component-log-in',
   templateUrl: './log-in.component.html',
   styleUrls: ['./log-in.component.scss']
 })
@@ -28,6 +28,7 @@ export class LogInComponent implements OnInit {
   onSubmit(){
    this.patternMessage = this.authservice.checkInputPattern(this.signInGroup);
    this.loginMessage = this.authservice.loggingIn(this.signInGroup.getRawValue());
+   
   }
 
 }

@@ -8,6 +8,7 @@ import { UserService } from './user.service';
 })
 export class AuthService {
 
+  isLoggedIn: boolean = false;
   constructor( private UserService: UserService, private router: Router) { }
   //checking if user exist in DB
   loginCheck(loginData) {
@@ -36,12 +37,14 @@ export class AuthService {
           localStorage.setItem('userId', JSON.stringify(user.id));
           // Wait 0.2 sec after successful login and redirect to 'Dashboard'
           setTimeout(() => {
-            this.router.navigate(['/dashboard']);
+            this.router.navigate(['/loggedin']);
           }, 200);
+          this.isLoggedIn = true;
           return true;
         });
       }
     });
+    this.isLoggedIn = false;
     return false;
   }
   checkInputPattern(signInGroup: FormGroup){
