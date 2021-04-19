@@ -1,19 +1,37 @@
 {
   "users": [
     {
+      "FirstName": "Mariami",
+      "LastName": "Tsirekidze",
       "email": "tsirekidze.mariam@yahoo.com",
       "password": "mari",
+      "avatar": "https://ptetutorials.com/images/user-profile.png",
       "id": 1
     },
     {
-      "email": "tsirekidze.mariam@yahoo.com",
-      "password": "mari",
+      "FirstName": "Tamar",
+      "LastName": "Tsirekidze",
+      "email": "tsirekidze.Tamar@yahoo.com",
+      "password": "Tamuna",
+      "avatar": "https://ptetutorials.com/images/user-profile.png",
       "id": 2
     },
     {
-      "email": "tsirekidze.mariam@yahoo.com",
-      "password": "mari",
+      "FirstName": "Sopio",
+      "LastName": "Tsirekidze",
+      "email": "tsirekidze.sopio@yahoo.com",
+      "password": "sopo",
+      "avatar": "https://ptetutorials.com/images/user-profile.png",
       "id": 3
+    },
+    {
+      "FirstName": "Natruli",
+      "LastName": "Gunava",
+      "Email": "natru@gmail.com",
+      "Password": "natonato123",
+      "Avatar": "C:\\fakepath\\IMG_20200707_201657.jpg",
+      "id": 4
     }
-  ]
+  ],
+  "messages": {}
 }

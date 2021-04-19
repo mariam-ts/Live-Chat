@@ -1,4 +1,19 @@
+
 <div class="mesgs">
+  <div class = "msg-navbar">
+    <img
+    src="https://ptetutorials.com/images/user-profile.png"
+    alt="sunil"
+  />
+  <div class="toggle">
+    <app-shared-toggle
+      ngModel
+      [toggleId]="'dark-toggle'"
+      #toggle="ngModel"
+    ></app-shared-toggle>
+    <label class="dark-mode" for="dark-toggle">Dark mode</label>
+  </div>
+  </div><hr>
   <div class="msg_history">
     <div class="incoming_msg">
       <div class="incoming_msg_img">

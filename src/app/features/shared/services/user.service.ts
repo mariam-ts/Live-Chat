@@ -32,4 +32,9 @@ export class UserService {
     }
     return throwError(errorMessage);
   }
+  post(postData){
+    this.HTTP.post(`${environment.BaseUrl}users`,postData )
+    .subscribe(res => console.log(res));
+    alert("Registered");
+  }
 }

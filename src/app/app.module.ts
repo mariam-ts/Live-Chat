@@ -1,29 +1,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LogInComponent } from './features/log-in/log-in.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './features/shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
-import { NavbarComponent } from './features/navbar/navbar.component';
-import { SidebarComponent } from './features/sidebar/sidebar.component';
+import { LoginPageComponent } from './features/login-page/login-page.component';
+import { ChatPageComponent } from './features/chat-page/chat-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LogInComponent,
-    NavbarComponent,
-    SidebarComponent
+    LoginPageComponent,
+    ChatPageComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

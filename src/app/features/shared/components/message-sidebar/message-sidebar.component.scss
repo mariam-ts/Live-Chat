@@ -27,7 +27,6 @@ img {
 .recent-heading {
   float: left;
   align-self: flex-start;
- // width: 40%;
   margin-left: 7px;
   margin-top: 8px;
 }
@@ -38,7 +37,7 @@ img {
   margin-left: auto;
   align-self: flex-end;
   .btn:hover{
-      background-color: $blue-dark;
+      background-color: $primary;
   }
 }
 .headind-srch {
@@ -51,7 +50,7 @@ img {
 }
 
 .recent-heading h4 {
-  color: #05728f;
+  //color: #05728f;
   @include text-style(21px);
   font-size: 21px;
   margin: auto;
@@ -77,8 +76,6 @@ img {
   width: 11%;
  img{
    border-radius: 50%;
-   width: 90px;
-   height:90px ;
  }
 }
 .chat-ib {
