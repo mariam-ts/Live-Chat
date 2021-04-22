@@ -20,8 +20,8 @@ export class LogInComponent implements OnInit {
 
   ngOnInit(): void {
     this.signInGroup = new FormGroup ({
-      email: new FormControl('', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]),
-      password: new FormControl('', [Validators.required, Validators.pattern("([0-9]+[a-zA-Z]+)|([a-zA-Z]+[0-9]+)"), Validators.minLength(8)]),
+      email: new FormControl('', /*[Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]*/),
+      password: new FormControl('', /*[Validators.required, Validators.pattern("([0-9]+[a-zA-Z]+)|([a-zA-Z]+[0-9]+)"), Validators.minLength(8)]*/),
     }
     );
   }

@@ -41,8 +41,6 @@ export class RegisterComponent implements OnInit {
        };
     this.UserService.post(postData);
     this.RegisterForm.reset();
-    console.log(postData)
-    console.log("natru")
   }
   uploadFile(e){
   }

@@ -49,7 +49,7 @@
               <label for="photo">Profile picture</label>
               <input type="file" formControlName = "Avatar" class="form-control" id="photo" aria-describedby="emailHelp" placeholder="Enter First Name" (click)="uploadFile($event)" [ngClass]="{
                 'is-invalid':
-                  RegisterForm.get('Avatar').invalid
+                  RegisterForm.get('Avatar').invalid && RegisterForm.get('RepeatPassword').touched
               }">
             </div>
           </div>
