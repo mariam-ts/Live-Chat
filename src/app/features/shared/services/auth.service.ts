@@ -18,8 +18,8 @@ export class AuthService {
         map((src) =>
           src.some(
             (user) =>
-              user.email === loginData.email &&
-              user.password === loginData.password
+              user.Email === loginData.Email &&
+              user.Password === loginData.Password
           )
         )
       );
@@ -27,14 +27,17 @@ export class AuthService {
   login(loginData) {
     return this.UserService
       .getAll()
-      .pipe(map((objs) => objs.find((obj) => obj.email === loginData.email)));
+      .pipe(map((objs) => objs.find((obj) => obj.Email === loginData.Email)));
   }
   loggingIn(loginData) {
     // Check if a User exist
     this.loginCheck(loginData).subscribe((exists) => {
       if (exists) {
+        console.log(exists);
+        console.log("Exists")
         this.login(loginData).subscribe((user) => {
           localStorage.setItem('userId', JSON.stringify(user.id));
+          localStorage.setItem('Avatar', JSON.stringify(user.Avatar));
           // Wait 0.2 sec after successful login and redirect to 'Dashboard'
           setTimeout(() => {
             this.router.navigate(['/loggedin']);
@@ -49,16 +52,16 @@ export class AuthService {
   }
   checkInputPattern(signInGroup: FormGroup){
     let message:string;
-    if(signInGroup.controls['email'].value === ""){
+    if(signInGroup.controls['Email'].value === ""){
       message = "Please fill the Email field"
     }
-    else if(signInGroup.controls['password'].value === ""){
+    else if(signInGroup.controls['Password'].value === ""){
       message = "Please fill the Password field"
     }
-    else if(signInGroup.controls['email'].invalid){
+    else if(signInGroup.controls['Email'].invalid){
       message = "Email is Invalid"
     }
-    else if(signInGroup.controls['password'].invalid){
+    else if(signInGroup.controls['Password'].invalid){
       message = "Password is Invalid"
     }
     return message;

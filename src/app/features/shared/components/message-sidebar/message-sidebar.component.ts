@@ -12,13 +12,17 @@ export class MessageSidebarComponent implements OnInit {
 
   img: string;
   Users: Array<IUser>;
+  avatar:string;
   constructor(private http: HttpClient, private UserService: UserService) { }
 
   ngOnInit(): void {
     this.UserService.getAll().subscribe((data) =>{
      this.Users = data;
+     console.log(this.Users)
     }
+    
     );
+    this.avatar=localStorage.getItem('Avatar');
   }
 
 }

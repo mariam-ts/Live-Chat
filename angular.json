@@ -35,7 +35,9 @@
             ],
             "scripts": [],
             "stylePreprocessorOptions": {
-              "includePaths": ["src/styles"]
+              "includePaths": [
+                "src/styles"
+              ]
             }
           },
           "configurations": {
@@ -97,8 +99,7 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-            ],
+            "styles": [],
             "scripts": []
           }
         },
@@ -126,6 +127,10 @@
               "devServerTarget": "Live-Chat-Angular:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }

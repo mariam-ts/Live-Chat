@@ -14,11 +14,11 @@ export class UserService {
   constructor(private HTTP: HttpClient) { }
   create(user: IUser): Observable<IUser>{
     return this.HTTP
-    .post<IUser>(`${environment.BaseUrl}users`, user);
+    .post<IUser>(`https://6081b77e73292b0017cde142.mockapi.io/api/users`, user);
   }
   getAll(){
     return this.HTTP
-    .get<IUser[]>(`${environment.BaseUrl}users`)
+    .get<IUser[]>(`https://6081b77e73292b0017cde142.mockapi.io/api/users`)
     .pipe(retry(2), catchError(this.handleError));
   }
   private handleError(error: HttpErrorResponse) {
@@ -33,7 +33,7 @@ export class UserService {
     return throwError(errorMessage);
   }
   post(postData){
-    this.HTTP.post(`${environment.BaseUrl}users`,postData )
+    this.HTTP.post(`https://6081b77e73292b0017cde142.mockapi.io/api/users`,postData )
     .subscribe(res => console.log(res));
     alert("Registered");
   }
