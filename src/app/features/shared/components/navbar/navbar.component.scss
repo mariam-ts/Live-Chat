@@ -57,7 +57,7 @@
 .navbar>ul>li>a:hover{
     color: $primary;
 }
-.dark-mode{
+.toggle-dark-mode{
   @include text-style(14px,$primary-dark);
   display: inline-block;
   cursor: pointer;
@@ -67,4 +67,25 @@
     display: flex;
     align-items: center;
     margin-right: 20px;
+}
+.dark-mode{
+    .navbar{
+        background-color: $darkmode-header;
+    }
+    .logo>p{
+        @include text-style(35.69px, $darkmode-text);
+    }
+    .navbar>.navigation>li>a{
+        @include text-style(18px,$darkmode-text);
+    }
+    .toggle-dark-mode{
+        @include text-style(14px,$darkmode-text);
+    }
+    .navbar>ul>li>a:hover{
+        color: $primary;
+    }
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }

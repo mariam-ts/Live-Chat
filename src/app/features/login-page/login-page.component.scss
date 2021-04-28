@@ -1,6 +1,8 @@
 @import "index.scss";
 :host{
     display: block;
+}
+.login-page{
     background-color: $background-1;
 }
 .login-body{
@@ -13,6 +15,7 @@
     display: grid;
     grid-template-columns: auto auto;
     width:1200px;
+    align-items: center;
 }
 .title-header{
     grid-column: 1/3;
@@ -105,4 +108,17 @@ shared-component-login-footer{
 }
 shared-component-login-footer{
     margin-top: 30px;
+}
+.dark-mode{
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    background-color: $darkmode-background;
+    .title{
+        @include text-style(36px, $darkmode-text);
+    }
+    hr{
+        background-color: $primary;
+    }
 }

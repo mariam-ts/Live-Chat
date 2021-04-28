@@ -73,11 +73,38 @@ form{
     display: flex;
     flex-direction: column;
     background-color: white;
-    margin-top: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     border-radius: 5px;
 }
 .photo{
     width: 100%;
     display: flex;
     flex-direction: column;
+}
+.dark-mode{
+    background-color: $darkmode-background;
+    background:rgba(0, 175, 238, 0.1);   
+    label{
+        @include text-style(16px, $darkmode-text);
+    }
+    input{
+        @include text-style(16px, $darkmode-text);
+    }
+    .max-width-content{
+        background-color: $darkmode-header;
+    }
+    form{
+        background-color: $darkmode-header;
+    }
+    .details{
+        background-color: $darkmode-header;
+    }
+    input{
+        background-color:$primary-lighter;
+    }
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }

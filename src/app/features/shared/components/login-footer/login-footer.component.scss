@@ -29,9 +29,30 @@
         }
         p{
             display: inline-block;
+            @include text-style(14px);
         }
         span{
             color:$primary-dark;
         }
     }
+}
+.dark-mode{
+    background-color: $darkmode-header;
+    .login-info{
+        background-color: $darkmode-header;
+        .division{
+            p{
+                @include text-style(14px, $darkmode-text);
+            }
+            span{
+                @include text-style(14px, $primary);
+            }
+        }
+       
+       
+    }
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }

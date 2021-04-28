@@ -1,9 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { IUser } from '../../interfaces/user.interface';
 import { UserService } from '../../services/user.service';
 //import {multer} from 'multer';
+import * as $ from 'jquery';
 @Component({
   selector: 'component-shared-register',
   templateUrl: './register.component.html',
@@ -13,6 +14,7 @@ export class RegisterComponent implements OnInit {
 
   RegisterForm: FormGroup;
   submittedUsers: any;
+  @Input() darkmode;
   constructor(private fb: FormBuilder, private http:HttpClient, private UserService: UserService ) { }
 
   ngOnInit(): void {
@@ -43,5 +45,16 @@ export class RegisterComponent implements OnInit {
     this.RegisterForm.reset();
   }
   uploadFile(e){
+  }
+  ngOnChanges(changes) {
+    console.log(changes.darkmode.currentValue);
+    $(document).ready(function(){
+      if(changes.darkmode.currentValue){
+        $('.register-form').addClass(['dark-mode']);
+      }
+      else{
+        $('.register-form').removeClass(['dark-mode']);
+      }
+    });
   }
 }
