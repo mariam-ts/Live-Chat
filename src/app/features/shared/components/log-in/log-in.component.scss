@@ -2,10 +2,7 @@
 :host{
     display: block;
 }
-.login-wrapper {
-    margin: auto;
-    width: 400px;
-}
+
 .card{
     border: none;
     border-radius: 5px;
@@ -82,7 +79,7 @@ hr{
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    
+
     background-color: $darkmode-header;
     border-radius: 5px;
     .form-signin{

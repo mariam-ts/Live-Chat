@@ -67,7 +67,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    .max-wdth{
+    .max-width{
         width: 1200px;
         display: flex;
         flex-direction: row;
@@ -122,6 +122,21 @@ shared-component-login-footer{
         background-color: $primary;
     }
 }
-@media (max-width: 600px){
-
+@media (max-width: 1200px){
+    .content{
+        grid-template-columns: auto;
+        width:auto;
+    }
+    shared-component-sidebar{
+        grid-column: 1 / 2;
+    }      
+    shared-component-log-in{
+        grid-column: 1 / 2;
+    }
+    .contact{
+        .max-width{
+            width: 900px;
+        }
+    }
+    
 }

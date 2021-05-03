@@ -89,3 +89,24 @@
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+@media (max-width: 1120px){
+    .logo{
+        margin-left: 5px;
+    }
+    .navbar{
+        .navigation{
+            width: 400px;
+        }
+    }
+    
+}
+@media (max-width: 860px){
+    .navbar>.navigation{
+        display: none;
+    }
+    .logo>p{
+        @include text-style(18px, $primary-dark);
+        text-align: center;
+        margin-top: 12px;
+    }
+}

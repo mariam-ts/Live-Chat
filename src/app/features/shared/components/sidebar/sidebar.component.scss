@@ -4,7 +4,6 @@
 }
 .sidebar{
     width:100%;
-    padding-right: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,4 +60,17 @@
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+}
+
+@media (max-width: 550px){
+    .computer-design{
+        display: none;
+    }
+    .who-we-are{
+        p{
+           width:auto;
+           margin-left: 20px;
+           margin-right: 20px;
+        }    
+    }
 }

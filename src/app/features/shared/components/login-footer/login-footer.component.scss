@@ -56,3 +56,19 @@
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+@media (max-width: 920px){
+    .login-info{
+        margin-left: 0%;
+    }
+}
+@media (max-width: 720px){
+    .login-info{
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items:flex-start;
+        .division{
+            border: none;
+           
+        }
+    }
+}

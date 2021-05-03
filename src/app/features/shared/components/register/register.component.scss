@@ -108,3 +108,44 @@ form{
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+
+@media (max-width: 1200px){
+    .max-width{
+        width: 900px;
+    }
+}
+@media (max-width: 920px){
+    .max-width{
+        width: 500px;
+    }
+    .register-form{
+    
+        hr{
+            width: 100px;
+        }
+    }
+}
+@media (max-width: 520px){
+    .max-width{
+        width: 300px;
+    }
+    .register-form{
+    
+        hr{
+            width: 50px;
+        }
+    }
+    form{
+
+        .combine{
+            flex-direction: column;
+        }
+        .name{
+            width: auto;
+        }
+        .password{
+            width: auto;
+        }
+       
+    }
+}
